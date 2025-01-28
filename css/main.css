@@ -1,13 +1,22 @@
+/* body{
+    background-color: rgb(191, 222, 219);
+} */
+
 /* h1{
     text-align: center;
 } */
 
 table {
     width: 100px;
-    /* margin-left: 45%; */
+    /* margin-left: 42%; */
 }
 
 table, td {
     border: 1px solid #000
 }
 
+table, td{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
