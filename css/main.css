@@ -15,8 +15,21 @@ table, td {
     border: 1px solid #000
 }
 
-table, td{
+table, td, .cover{
     width: 200px;
     height: 50px;
     text-align: center;
+    background-color: green;
+    
+}
+
+/* tr td {
+    display: none;
+    color: rebeccapurple;
+} */
+
+.cover{
+
+    background-color: red;
+
 }

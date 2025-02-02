@@ -87,16 +87,19 @@ function buildBoard(){
                 
                 // const res = setMinesNegsCount(gBoard)
                 const cell = board[i][j]
-                const className = `cell cell${i}-${j}`
+                const className = `cell cell ${i}-${j} cover`
                 const infoCell = cell.isMine ? MINES : setMinesNegsCount(i, j, board)
                 // const hiddenCell = cell.isCovered ? EMPTY : infoCell
+               
                 // const hiddenCell = cell.isCovered ? EMPTY : true
                 
-
+                
                 // strHTML += `<td onclick = "onCellClicked(this)"="${className}">${infoCell}</td>`  
-                strHTML += `<td onclick = "onCellClicked(this)"="${className}">${infoCell}</td>`  
+                strHTML += `<td onclick = "onCellClicked(this)"="${className}">${infoCell}</td>`
+                
+                
                 // strHTML += `<button class="onCell" onclick="onCellClicked(this)">${setMinesNegsCount()}</button>`  
-               
+                console.log(strHTML)
                 console.log(className)
                 console.log(cell)
             }
@@ -107,9 +110,17 @@ function buildBoard(){
         const elBoard = document.querySelector('.board')
         elBoard.innerHTML = strHTML
 
+
+        // const elHideCell = document.querySelector('cover')
+        // elHideCell.style.display = 'none'
+        // elHideCell.style.color = ''
+
+        // console.log('g', elHideCell)
+        
+
         
         
-        // elBoard.style.display = 'none'
+        
         
         
     }
@@ -131,8 +142,9 @@ function setMinesNegsCount(cellI, cellJ, board) {
     return minesAroundCount
 }
     
-    onCellClicked()
+    // onCellClicked()
     function onCellClicked(elCell, i, j){
+        console.log(elCell)
         
         var clickedNum = +elCell.innerText
          console.log(clickedNum)
